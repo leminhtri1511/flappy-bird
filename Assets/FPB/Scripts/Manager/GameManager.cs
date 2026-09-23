@@ -1,14 +1,24 @@
+using FPB.Scripts.Pipe;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace FPB.Scripts
+namespace FPB.Scripts.Manager
 {
+    public enum GameState
+    {
+        Home = 0,
+        GetReady = 1,
+        Playing = 2,
+        GameOver = 3
+    }
+
     public class GameManager : MonoBehaviour
     {
         public static GameManager Instance { get; private set; }
 
         [Header("Controllers")]
         [SerializeField] private PlayerController _playerController;
+        [SerializeField] private PipeSpawner _pipeSpawner;
         [SerializeField] private GameViewHandle _gameViewHandle;
 
         [Header("Others")]
@@ -107,7 +117,12 @@ namespace FPB.Scripts
             CurrentScore++;
         }
 
-        private void ResetGame() => _playerController.ResetPlayer();
+        private void ResetGame()
+        {
+            _playerController.ResetPlayer();
+            _pipeSpawner.ResetSpawner();
+        }
+
         private void SetGameState(GameState state) => GameState = state;
     }
 }
