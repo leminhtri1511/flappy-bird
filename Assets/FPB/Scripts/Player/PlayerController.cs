@@ -2,7 +2,7 @@ using FPB.Scripts.Manager;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace FPB.Scripts
+namespace FPB.Scripts.Player
 {
     public class PlayerController : MonoBehaviour
     {
