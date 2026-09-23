@@ -396,7 +396,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &264280270
 RectTransform:
   m_ObjectHideFlags: 0
@@ -505,6 +505,7 @@ GameObject:
   - component: {fileID: 417118569}
   - component: {fileID: 417118571}
   - component: {fileID: 417118570}
+  - component: {fileID: 417118572}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Obstacle
@@ -655,6 +656,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3.36, y: 1.11}
   m_EdgeRadius: 0
+--- !u!114 &417118572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417118567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9073869225a64b27b2f7fb26168e85ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scrollSpeed: 0.5
+  _material: {fileID: 2100000, guid: 21e6c735e4da80145be7d0d81c7fd96e, type: 2}
 --- !u!1 &501321987
 GameObject:
   m_ObjectHideFlags: 0
@@ -687,10 +702,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1728053960}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 300, y: 0}
+  m_SizeDelta: {x: 600, y: 195}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &501321989
 MonoBehaviour:
@@ -1608,10 +1623,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1728053960}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 300, y: -105}
+  m_SizeDelta: {x: 600, y: 195}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1389188686
 MonoBehaviour:

@@ -1,5 +1,6 @@
 using FPB.Scripts.Pipe;
 using FPB.Scripts.Player;
+using FPB.Scripts.View;
 using UnityEngine;
 using UnityEngine.UI;
 
