@@ -79,8 +79,18 @@ namespace FPB.Scripts
             if (GameManager.Instance.GameState == GameState.GameOver) return;
 
             if (!collision2D.collider.CompareTag(OBSTACLE_TAG)) return;
-            
+
             GameManager.Instance.GameOver();
+        }
+
+        public void ResetPlayer()
+        {
+            _rigidbody.simulated = false;
+            _rigidbody.linearVelocity = Vector2.zero;
+            _rigidbody.angularVelocity = 0f;
+            _startPosition = new Vector3(-0.5f, 0f, 0f);
+            transform.position = _startPosition;
+            transform.rotation = Quaternion.identity;
         }
     }
 }

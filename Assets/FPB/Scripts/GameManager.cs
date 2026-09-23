@@ -7,7 +7,8 @@ namespace FPB.Scripts
     {
         public static GameManager Instance { get; private set; }
 
-        [Header("UI Handle")]
+        [Header("Controllers")]
+        [SerializeField] private PlayerController _playerController;
         [SerializeField] private GameViewHandle _gameViewHandle;
 
         [Header("Others")]
@@ -68,6 +69,8 @@ namespace FPB.Scripts
             CurrentScore = 0;
 
             _gameViewHandle.SetViewOnPlay();
+
+            ResetGame();
         }
 
         public void GamePlay()
@@ -87,14 +90,14 @@ namespace FPB.Scripts
 
         private void FinalScoreHandle()
         {
-            _gameViewHandle.GameOverScoreText.text = CurrentScore.ToString();
+            _gameViewHandle.GameOverScoreText.text = $"Total score: {CurrentScore}";
 
             if (CurrentScore > BestScore)
             {
                 BestScore = CurrentScore;
             }
 
-            _gameViewHandle.GameOverBestScoreText.text = BestScore.ToString();
+            _gameViewHandle.GameOverBestScoreText.text = $"Best score: {BestScore}";
         }
 
         public void AddScore()
@@ -104,6 +107,7 @@ namespace FPB.Scripts
             CurrentScore++;
         }
 
+        private void ResetGame() => _playerController.ResetPlayer();
         private void SetGameState(GameState state) => GameState = state;
     }
 }
