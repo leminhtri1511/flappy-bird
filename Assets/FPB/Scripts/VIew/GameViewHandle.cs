@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-namespace FPB.Scripts
+namespace FPB.Scripts.View
 {
     public class GameViewHandle : MonoBehaviour
     {
