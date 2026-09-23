@@ -1,8 +1,16 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace FPB.Scripts
+namespace FPB.Scripts.Manager
 {
+    public enum GameState
+    {
+        Home = 0,
+        GetReady = 1,
+        Playing = 2,
+        GameOver = 3
+    }
+
     public class GameManager : MonoBehaviour
     {
         public static GameManager Instance { get; private set; }
