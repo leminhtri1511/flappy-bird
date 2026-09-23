@@ -1,4 +1,3 @@
-using FPB.Scripts.Manager;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
