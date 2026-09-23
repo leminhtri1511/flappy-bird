@@ -26,8 +26,10 @@ namespace FPB.Scripts.Manager
         [Header("Others")]
         [SerializeField] private Button _playButton;
 
+        public GameState GameState { get; private set; } = GameState.Home;
+        
+        private Camera _camera;
         private const string BEST_SCORE_KEY = "BestScore";
-        public GameState GameState { get; protected set; } = GameState.Home;
         private int _currentScore;
 
         public int CurrentScore
@@ -43,7 +45,6 @@ namespace FPB.Scripts.Manager
         public int BestScore
         {
             get => PlayerPrefs.GetInt(BEST_SCORE_KEY, 0);
-
             set => PlayerPrefs.SetInt(BEST_SCORE_KEY, value);
         }
 
